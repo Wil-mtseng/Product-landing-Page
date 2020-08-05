@@ -1,0 +1,16 @@
+#main-doc {
+  display: flex;  
+  float: left;
+}
+
+#header {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+}
+
+@media(width: 720px) {
+  #navbar {
+    width: 15px;
+  }
+}
