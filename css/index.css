@@ -3,17 +3,46 @@ body {
 	padding: 0;
 }
 
-#main-doc {
-  display: flex;  
-  float: left;
+#wrapper {
+	/*display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-area: 
+	"h h h h h h h h h h h h" 
+	"m m m m m m m m m m m m"
+	"f f f f f f f f f f f f"*/
+}
+
+#nav-bar {
+  grid-area: h;
+
+  position: fixed;
 
 }
+
 
 #header {
-  position: fixed;
-  width: 100vw;
-  height: 10vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  background: url(../img/headr_img.jpeg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 4rem 2rem;
+
+  color: #fff;
 }
+
+#main-doc {
+	grid-area: m;
+
+}
+
+/*#footer {
+	grid-area: f;
+}*/
 
 @media(width: 720px) {
   #navbar {
