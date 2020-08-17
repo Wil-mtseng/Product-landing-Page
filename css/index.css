@@ -1,42 +1,46 @@
 body {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif; 
+
 }
 
 #wrapper {
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-	grid-template-rows: 50em auto-fill 100px;
-	grid-gap: 5px;
+	grid-template-rows: 1000px auto-fill 100px;
+	grid-gap: 20px;
 	grid-template-areas: 
 	"h h h h h h h h h h h h"
 	"c c c c c c c c c c c c"
 	"f f f f f f f f f f f f";
 }
 
-
+/* Header section */
 #header {
 	grid-area: h;
 
-	background: url(../img/headr_img.jpeg) center;
-	/*background-size: cover;
-	background-repeat: no-repeat;*/
+	background: url(../img/mountain-bg.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
-	/*padding: 4rem 2rem;*/
+	padding: 1em 2em 10em 2em;
 
 	color: #fff;
+
+	height: 45vh;
 }
 
-/*#nav-bar {
-	grid-area: h;
-	/*position: left;*/
-	/*align-items: left;*/
-
+.nav-bar {
+	display: flex;
+	
 }
 
 .nav-link {
 	display: inline-block;
+	
 
 	color: #00ffff;
 	
@@ -44,7 +48,21 @@ body {
 	text-align: center;
 	font-weight: bold;
 
-	justify-content: end;
+	align-content: center;
+	grid-auto-flow: column;
+	padding: 10px;	
+}
+
+.logo {
+	margin-right: auto;
+	
+	color: #00ffff;
+
+	text-align: center;
+	text-decoration: none;
+
+	padding: 10px;	
+
 }
 
 .nav-link:hover {
@@ -55,32 +73,207 @@ body {
 	transition: .8;
 }
 
-#headr-bttn {
+.header-msg {
+	display: grid;
+
+	margin: 7em;
+	height: auto;
+	align-items:  center;
+	justify-items: center; 
+}
+
+.header-text {
+ 	padding-top: 1px;
+}
+
+.headr-bttn {
 	color: #fff;
 	background-color: #00ffff;
 
 	border-style: none;
 	border-radius: 24px;
+
+	width: 30%;
+	height: 2em;
+	cursor: pointer;
 }
 
+/* Main section */
 #main-doc {
 	grid-area: c;
 	align-items: center;
+	padding: 10px;
+	margin: 2em;
+	margin-top: auto;
+}
 
-	background-color: orange;	
+.Form {
+	display: grid;
+	
+	width: 90%;
+	height: auto;
+
+	align-items: center;
+	justify-items: center;
+
+	margin: 2em;
+	/*padding: 2em;*/
+}
+
+label {
+	text-transform: uppercase;
+}
+
+/*Inputs*/
+input[type=email],
+input[type=textarea] {
+	width: 100%;
+	height: auto;
+	margin: 2px 0px;
+	padding: 6px 20px;
+
+	display: flex;
+	box-sizing: border-box;
+
+	border-top: 0;
+	border-left: 0; 
+	border-right: 0;
+	border-bottom: 1px dotted #000;
+	border-bottom-width: thin;
+
+	font-size: 16px;
 }
 
 
+input[type=submit] {
+	width: 100%;
+	color: #fff;
+	
+	padding: 7px 10px;
+	margin: 8px 0;
+	background-color: #00ffff;
+	
+	border: none;
+	border-radius: 24px;
+	box-sizing: border-box;
+	
+	cursor: pointer;
 
-#footer {
+
+}
+.Features {
+	display: grid;
+
+	align-items:  center;
+	justify-items: center; 
+	margin: 2em;
+	
+
+}
+
+.Features-header {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.Feature-wrapper {
+	display: grid;
+
+	align-items:  center;
+	justify-items: center; 
+	
+	margin: 2em;
+	padding-bottom: 3em;
+}
+
+.video {
+	display: block;
+	width: 60vw;
+	height: auto;
+}
+
+.Pricing {
+	display: grid;
+	
+	grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+	grid-gap: 20px;
+
+	list-style:  none;
+	margin: 2em;
+}
+
+.card-header {
+	margin: 0;
+	padding: 20px;
+
+	color: #fff;
+	background-color: #00ffff;
+
+	font-family: 'Roboto', sans-serif; 
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+.card {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+	border: 1px solid #00ffff;
+	border-radius: 5px;
+
+	flex-direction: column;
+}
+
+.card .website-price {
+	margin-top: auto;
+	border-top: 1px solid #00ffff;
+	padding: 10px;
+
+	text-align: center; 
+
+	text-decoration: none;
+	color: #00ffff;
+}
+
+
+.card .paragraph {
+	padding: 10px;
+	margin: 2em;
+}
+
+
+/* Footer section */
+.footer {
 	grid-area: f;
 
-	background-color: green;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 
+
+	background-color: #2b2d2f;
+	text-align: center; 
 }
 
-/*@media(width: 720px) {
-  #navbar {
-    width: 15px;
-  }
-}*/
+.footer-nav {
+	display: inline-block;
+	margin: 2em; 
+	padding: 1em;
+}
+
+.footer-link {
+	color: #00ffff;
+
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+
+
+	/*padding-top: 1em;*/
+}
+
+.copy {
+	/*margin: 2em; */
+	padding: 1.2em;	
+}
